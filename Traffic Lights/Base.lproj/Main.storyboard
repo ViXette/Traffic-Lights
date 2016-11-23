@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Lights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Road" translatesAutoresizingMaskIntoConstraints="NO" id="9UD-71-wLH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="9fK-P2-yxt">
+                                <rect key="frame" x="16" y="20" width="288" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9fK-P2-yxt" secondAttribute="height" multiplier="343:349" id="TIY-TT-IdM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnW-6R-X1w">
+                                <rect key="frame" x="16" y="321" width="288" height="97"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f6-fX-7RA">
+                                <rect key="frame" x="93" y="426" width="134" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9f6-fX-7RA" secondAttribute="height" multiplier="1:1" id="PVJ-gP-Elt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Start" backgroundImage="redButton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hx-42-pcI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9UD-71-wLH" secondAttribute="trailing" id="2c7-Kd-K1Y"/>
+                            <constraint firstItem="rnW-6R-X1w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="71r-oA-O0K"/>
+                            <constraint firstItem="rnW-6R-X1w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Kv-zp-swy"/>
+                            <constraint firstItem="9f6-fX-7RA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="AZo-yp-g7G"/>
+                            <constraint firstItem="rnW-6R-X1w" firstAttribute="top" secondItem="9fK-P2-yxt" secondAttribute="bottom" constant="8" id="DBG-xN-tZm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9f6-fX-7RA" secondAttribute="trailing" constant="77" id="DdI-5t-o1Y"/>
+                            <constraint firstItem="9UD-71-wLH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HhO-8N-OXY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9f6-fX-7RA" secondAttribute="bottom" constant="8" id="TAZ-LE-rdF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9UD-71-wLH" secondAttribute="bottom" id="U2B-RN-0UT"/>
+                            <constraint firstItem="9fK-P2-yxt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eXQ-C7-B0U"/>
+                            <constraint firstItem="9fK-P2-yxt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nuJ-y6-QZ5"/>
+                            <constraint firstItem="9f6-fX-7RA" firstAttribute="top" secondItem="rnW-6R-X1w" secondAttribute="bottom" constant="8" id="pL0-1W-NLX"/>
+                            <constraint firstItem="9UD-71-wLH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="te1-h2-Kf5"/>
+                            <constraint firstItem="9fK-P2-yxt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yt1-Rr-1bF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counter_label" destination="rnW-6R-X1w" id="Su2-SY-9YT"/>
+                        <outlet property="startStop_button" destination="9f6-fX-7RA" id="GSb-oq-hWF"/>
+                        <outlet property="trafficLight" destination="9fK-P2-yxt" id="uzc-3f-GJp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="72.413793103448285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Road" width="1674" height="1902"/>
+        <image name="TrafficLight" width="550" height="900"/>
+        <image name="redButton" width="1353" height="1353"/>
+    </resources>
+</document>
